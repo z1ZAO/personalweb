@@ -99,7 +99,7 @@ export default function Home() {
               title="脉脉"
               description="我的职业经历和技能"
               icon={<Users className="h-6 w-6" />}
-              url="https://maimai.cn/profile/detail?dstu=238128148"
+              url="https://maimai.cn/"
               color="from-blue-600 to-blue-500"
             />
             <SocialCard
