@@ -4,8 +4,8 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
-  title: "朱子豪 - 朱子豪个人网站",
-  description: "朱子豪的个人网站和技术博客",
+  title: "朱子豪 - 个人主页",
+  description: "个人主页和技术博客",
     generator: 'v0.dev'
 }
 
