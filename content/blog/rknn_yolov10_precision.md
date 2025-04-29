@@ -8,7 +8,7 @@ tags: ["RK3588", "神经网络", "python"]
 正在研究中...
 
 ## 问题描述
-我用yolov10训练了pt文件，通过瑞芯微提供的框架转换成了onnx
+最近训练了pt文件（yolo），通过瑞芯微提供的框架转换成了onnx
 官方提供的ultralytics：
 
 1.置信度分支添加sigmoid算子
