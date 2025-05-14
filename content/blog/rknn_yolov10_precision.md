@@ -5,8 +5,6 @@ excerpt: "提升rk3588 yolov10 runtime精度文档"
 tags: ["RK3588", "神经网络", "python"]
 ---
 
-正在研究中...
-
 ## 问题描述
 最近训练了pt文件（yolo），通过瑞芯微提供的框架转换成了onnx
 官方提供的ultralytics：
@@ -66,7 +64,6 @@ sigmoid对输入的变化非常敏感float16在输入x很大（比如>6）或者
 
 ## 解决方案 
 
-
 #### 1.Sigmoid后处理 -> CPU
 在yolov10的ultralytics里把置信度分支的sigmoid去掉：
 
@@ -83,6 +80,9 @@ sigmoid对输入的变化非常敏感float16在输入x很大（比如>6）或者
 <center>runtime精度校验结果</center>
 
 #### 2.自定义算子
-先尝试开发一个cpu sigmoid算子（float），在后处理时调用，验证可行性；
+arm核上编译了一个cpu sigmoid算子（-10~10 lut），在后处理时调用，如果有用到simoid，可以查看每一层scale，然后根据不同的scale修改不同的lut。
+测试下来，精度没有问题，推理速度也还不错，不过发现pt->onnx的时候会掉很多精度，还需继续研究
 
-#### 2.SiLU -> ReLU
+## 新的问题
+### 关注pt->onnx的精度问题
+在思考具体是后处理问题还是掉精度的问题...
