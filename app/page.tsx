@@ -41,7 +41,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-1 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="text-center md:text-left">
             <h1 className="mb-6 text-5xl font-bold md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-gray-900 via-gray-700 to-gray-800">
-              <span className="font-extrabold">Zao's blogs</span>
+              <span className="font-extrabold">Zao's blog</span>
             </h1>
             <p className="mx-auto md:mx-0 mb-10 max-w-2xl text-lg text-gray-600 leading-relaxed">工程师 | 音乐人</p>
             <div className="flex justify-center md:justify-start gap-4">
