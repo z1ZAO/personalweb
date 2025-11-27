@@ -42,7 +42,7 @@ tags: ["RK3588", "神经网络", "python"]
 <center>图3：yolov8换成ReLU架构</center>
 发现精度下降不会像yolov10明显，可以得出SiLU激活函数在部署后的目标score量化过程中存在问题，可以在混合精度量化的.cfg调整量化scale和零点（但是很难确定，有点玄学，解释写在下面）
 
-### 从激活函数上来看🎯 背景：量化中的 scale 与 zero point
+### 从激活函数上来看 背景：量化中的 scale 与 zero point
 <img src="/images/blog/rknn_yolov10_precision/stimulate_function.png" width="300" />
 
 &emsp;从精度上来看在小数特别小或特别大的时候，float16只有10个有效位，容易发生数值塌陷或者数值跳变。
